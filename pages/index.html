@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/melhoramigo.ico">
+    <title>Petshop Melhor Amigo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="pma-container-nav">
+            <div class="logo">
+                <img src="imagens/pma-logo.png" alt="Logo Petshop">
+                <h1>Petshop Melhor Amigo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="gallery.html">Galeria</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id=carousel class=carousel>
+            <div class="carousel-slide">
+                <img src="imagens/gato-verde.png" alt="Imagem 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/adote.png" alt="Imagem 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/dog-feliz.png" alt="Imagem 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/dog-assustado.png" alt="Imagem 3">
+            </div>
+            <button id="prevButton" class="carousel-control-prev">&lt;</button>
+            <button id="nextButton" class="carousel-control-next">&gt;</button>
+        </section>
+
+       
+        <section id="hero">
+            <div class="container">
+                <h2>Seu melhor amigo em boas mãos!</h2>
+                <p>Oferecemos cuidados excepcionais e serviços de alta qualidade para garantir que seu melhor amigo tenha uma vida feliz e saudável.</p>
+                <button onclick="window.location.href='produtos.html'">Conheça nossos produtos</button>
+            </div>
+        </section>
+
+        <section id="servicos" class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="card servico" style="width: 18rem;">
+                    <img src="imagens/Design sem nome (2).png" class="card-img-top" alt="Banho Relaxante">
+                    <div class="card-body">
+                        <h5 class="card-title">Banho Relaxante</h5>
+                        <p class="card-text">Banhos relaxantes para cães e gatos com produtos de qualidade.</p>
+                    </div>
+                </div>
+                <div class="card servico" style="width: 18rem;">
+                    <img src="imagens/5.png" class="card-img-top" alt="Tosa Especializada">
+                    <div class="card-body">
+                        <h5 class="card-title">Tosa Especializada</h5>
+                        <p class="card-text">Serviços profissionais de tosa para todas as raças.</p>
+                    </div>
+                </div>
+                <div class="card servico" style="width: 18rem;">
+                    <img src="imagens/6.png" class="card-img-top" alt="Ração Premium">
+                    <div class="card-body">
+                        <h5 class="card-title">Ração Premium</h5>
+                        <p class="card-text">Rações de alta qualidade para todas as idades e raças.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promocoes" class="container">
+            <h2>Promoções Especiais</h2>
+            <div class="promocao">
+                <img src="imagens/12.png" alt="Promoção">
+                <div class="promocao-info">
+                    <h3>Desconto de 20% em todos os serviços de tosa</h3>
+                    <p>Aproveite nossas ofertas e mantenha seu pet sempre lindo e saudável.</p>
+                    <button onclick="window.location.href='produtos.html'">Confira as promoções</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 20px;">&copy; 2024 Petshop Melhor Amigo</p>
+            <p style="font-size: 20px;">Desenvolvido por @DEVFR4G4</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
