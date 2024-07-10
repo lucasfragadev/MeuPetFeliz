@@ -1,16 +1,16 @@
 header {
-    width: 100vw;
+    width: 100%;
     background-color: #d5ef96;
     color: #000000;
 }
 
 .pma-container-nav {
-    padding: 0 2rem 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     margin: 0 auto;
+    padding: 0 2rem 0 1rem;
 }
 
 header .logo {
@@ -24,8 +24,9 @@ header .logo img {
 }
 
 header h1 {
+    display: flex;
+    margin: 1rem;
     font-size: 2em;
-    margin: 0;
     font-weight: bold;
     color: #7878FF;
 }
@@ -33,7 +34,7 @@ header h1 {
 #img-logo {
     max-width: 10rem;
     height: 10rem;
-    }
+}
 
 .search-bar {
     display: flex;
@@ -133,6 +134,15 @@ header nav ul li a {
     right: 5;
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 5;
+    right: 5;
+}
+
 .hamburger-menu span {
     height: 3px;
     width: 25px;
@@ -141,18 +151,16 @@ header nav ul li a {
     border-radius: 5px;
 }
 
-/* SMARTPHONE*/
 @media (max-width: 768px) {
-
     header h1 {
         font-size: 1.3rem;
     }
 
-    .pma-container-nav{
+    .pma-container-nav {
         display: block;
     }
 
-    #img-logo{
+    #img-logo {
         width: 5rem;
         height: 5rem;
     }
@@ -209,7 +217,7 @@ header nav ul li a {
     .nav-links {
         flex-direction: column;
         padding: 0;
-        margin-top: 20px; 
+        margin-top: 20px;
     }
 
     .nav-links li {
@@ -218,11 +226,11 @@ header nav ul li a {
 
     .nav-links li a {
         font-size: 1.5rem;
-        color: #333; 
+        color: #333;
         display: block;
         padding: 10px;
         transition: background-color 0.3s ease;
-        text-decoration: none; 
+        text-decoration: none;
     }
 
     .nav-links li a:hover {
@@ -279,24 +287,22 @@ header nav ul li a {
         font-size: 1.5rem;
     }
 
-    header nav ul li:hover{
+    header nav ul li:hover {
         background-color: rgb(255, 255, 255);
     }
 }
-
-/* TABLET */
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
     header h1 {
         font-size: 1.5rem;
     }
 
-    #img-logo{
+    #img-logo {
         width: 5rem;
         height: 5rem;
     }
 
-    .pma-container-nav{
+    .pma-container-nav {
         display: block;
     }
 
@@ -352,7 +358,7 @@ header nav ul li a {
     .nav-links {
         flex-direction: column;
         padding: 0;
-        margin-top: 20px; 
+        margin-top: 20px;
     }
 
     .nav-links li {
@@ -361,11 +367,11 @@ header nav ul li a {
 
     .nav-links li a {
         font-size: 1.5rem;
-        color: #333; 
+        color: #333;
         display: block;
         padding: 10px;
         transition: background-color 0.3s ease;
-        text-decoration: none; 
+        text-decoration: none;
     }
 
     .nav-links li a:hover {
@@ -422,7 +428,8 @@ header nav ul li a {
         font-size: 1.5rem;
     }
 
-    header nav ul li:hover{
+    header nav ul li:hover {
         background-color: rgb(255, 255, 255);
     }
 }
+
