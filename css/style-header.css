@@ -10,12 +10,13 @@ header {
     align-items: center;
     width: 100vw;
     margin: 0 auto;
-    padding: 0 2rem 0 1rem;
+    /* padding: 0 2rem 0 1rem; */
 }
 
 header .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 header .logo img {
@@ -144,13 +145,19 @@ header nav ul li a {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 0.875rem;
+        font-size: 1.2rem;
         text-align: center;
-        margin: 0rem 1.563rem; 
     }
 
     .pma-container-nav {
         display: block;
+        border: rgb(47, 0, 255) solid 2px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
     }
 
     #img-logo {
@@ -168,25 +175,189 @@ header nav ul li a {
     }
     
     .search-bar input {
+        text-align: left;
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
         border: 1px solid #5757CC;
         border-radius: 1rem;
+        flex: auto;
+        margin: 0 0 0 1rem;
+    }
+    
+    .search-bar button {
+        padding: 0.4rem 0.5rem;
+        font-size: 1rem;
+        border: none;
+        background-color: #7878FF;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 1rem;
+        margin: 0 1rem 0 0.1rem;
+    }
+    
+    .search-bar button:hover {
+        background-color: #5757CC;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+        line-height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header .nav-bar {
+        position: relative;
+        width: 100%;
+        height: 0px;
+        line-height: 10px;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        padding: 0rem 0px 0px 1.25rem;
+    }
+    
+    header .nav-bar.open {
+        height: 9.375rem;
+        transition: 0.8s ease-in-out;
+        padding: 1.25rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 1.5rem;
+        color: #333;
+        display: block;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .nav-links li a:hover {
+        background-color: #c5e1a5;
+    }
+    
+    #icon-product:hover,
+    #icon-product:hover::before,
+    #icon-gallery:hover,
+    #icon-gallery:hover::before,
+    #icon-contact:hover,
+    #icon-contact:hover::before {
+        font-size: initial;
+        content: initial;
+        position: initial;
+        left: initial;
+        line-height: initial;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.35rem;
+        margin-top: 1.3rem;
+        z-index: 10;
+    }
+
+    .hamburger-menu span {
+        height: 0.313rem;
+        width: 2.063rem;
+        background-color: #7878FF;
+        margin-bottom: 0.188rem;
+        border-radius: 0.313rem;
+        transition: transform 0.3s ease;
+    }
+
+    .hamburger-menu.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    header nav ul li:hover {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .pma-container-nav {
+        display: block;
+        padding: 0rem 7.5rem 0rem 3rem;
+    }
+
+    #img-logo {
+        margin: 0.875rem;
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 0.3rem;
+    }
+    
+    .search-bar input {
+        padding: 0.5rem 1rem;
+        font-size: 1.875rem;
+        border: 1px solid #5757CC;
+        border-radius: 1.5rem;
         text-align: left;
         flex: 1;
         margin-bottom: 0.25rem;
     }
     
     .search-bar button {
-        padding: 0.8rem 1rem;
-        font-size: 0.5rem;
+        padding: 0.4rem 0.5rem;
+        font-size: 1.875rem;
         border: none;
         background-color: #7878FF;
         color: #fff;
         cursor: pointer;
-        border-radius: 1rem;
+        border-radius: 1.5rem;
         margin-left: 0.313rem;
         margin-bottom: 0.25rem;
+        /* border: red solid 1px; */
     }
     
     .search-bar button:hover {
@@ -256,16 +427,16 @@ header nav ul li a {
     .hamburger-menu {
         display: flex;
         position: absolute;
-        top: 0.063rem;
-        right: 0.313rem;
-        margin-top: 1rem;
+        top: 1.5rem;
+        right: 6.1rem;
+        margin-top: 1.55rem;
         margin-right: 2rem;
         z-index: 10;
     }
 
     .hamburger-menu span {
-        height: 0.313rem;
-        width: 2.063rem;
+        height: 0.626rem;
+        width: 3rem;
         background-color: #7878FF;
         margin-bottom: 0.188rem;
         border-radius: 0.313rem;
@@ -308,113 +479,33 @@ header nav ul li a {
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media (max-width: 360px) {
     header h1 {
-        font-size: 1.5rem;
-    }
-
-    #img-logo {
-        width: 5rem;
-        height: 5rem;
-    }
-
-    .pma-container-nav {
-        display: block;
-    }
-
-    .search-bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-bottom: 0.3rem;
-    }
-    
-    .search-bar input {
-        padding: 0.5rem 0.1rem;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 1rem;
-        text-align: left;
-        flex: 1;
-        margin-bottom: 0.25rem;
-    }
-    
-    .search-bar button {
-        padding: 0.5rem 0.5rem;
-        font-size: 1rem;
-        border: none;
-        background-color: #7878FF;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 1rem;
-        margin-left: 5px;
-        margin-bottom: 0.25rem;
-    }
-    
-    .search-bar button:hover {
-        background-color: #5757CC;
-    }
-
-    header nav ul li a {
-        font-size: 1rem;
-    }
-    
-    header .nav-bar {
-        width: 100%;
-        height: 0px;
+        font-size: 0.875rem;
         text-align: center;
-        transition: height 0.3s ease-out;
-    }
-    
-    header .nav-bar.open {
-        height: 150px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        padding: 0;
-        margin-top: 20px;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .nav-links li a {
-        font-size: 1.5rem;
-        color: #333;
-        display: block;
-        padding: 10px;
-        transition: background-color 0.3s ease;
-        text-decoration: none;
-    }
-
-    .nav-links li a:hover {
-        background-color: #c5e1a5;
-    }
 
     .hamburger-menu {
         display: flex;
         position: absolute;
-        top: 5px;
-        right: 5px;
-        margin-top: 1.7rem;
-        margin-right: 2rem;
+        top: 1.8rem;
+        right: 1.35rem;
+        margin-top: 1.3rem;
         z-index: 10;
     }
 
     .hamburger-menu span {
-        height: 3px;
-        width: 25px;
+        height: 0.2rem;
+        width: 1.5rem;
         background-color: #7878FF;
-        margin-bottom: 5px;
-        border-radius: 5px;
+        margin-bottom: 0.188rem;
+        border-radius: 0.313rem;
         transition: transform 0.3s ease;
     }
 
     .hamburger-menu.open span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(0.2rem) rotate(45deg);
     }
 
     .hamburger-menu.open span:nth-child(2) {
@@ -422,30 +513,6 @@ header nav ul li a {
     }
 
     .hamburger-menu.open span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    header nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-        font-size: 1.5rem;
-    }
-
-    header nav ul li:hover {
-        background-color: rgb(255, 255, 255);
+        transform: translateY(-0.55rem) rotate(-45deg);
     }
 }
-
