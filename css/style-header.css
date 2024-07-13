@@ -157,7 +157,7 @@ header nav ul li a {
     .logo {
         display: flex;
         flex-direction: row;
-        margin: 20px;
+        margin: 1.25rem;
     }
 
     #img-logo {
@@ -320,13 +320,19 @@ header nav ul li a {
 
     .pma-container-nav {
         display: block;
-        padding: 0rem 7.5rem 0rem 3rem;
+        border: blue solid 2px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        margin: 1.25rem;
     }
 
     #img-logo {
         margin: 0.875rem;
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     .search-bar {
@@ -338,25 +344,24 @@ header nav ul li a {
     }
     
     .search-bar input {
-        padding: 0.5rem 1rem;
-        font-size: 1.875rem;
-        border: 1px solid #5757CC;
-        border-radius: 1.5rem;
         text-align: left;
-        flex: 1;
-        margin-bottom: 0.25rem;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #5757CC;
+        border-radius: 1rem;
+        flex: auto;
+        margin: 0 0 0 1rem;
     }
     
     .search-bar button {
         padding: 0.4rem 0.5rem;
-        font-size: 1.875rem;
+        font-size: 1rem;
         border: none;
         background-color: #7878FF;
         color: #fff;
         cursor: pointer;
-        border-radius: 1.5rem;
-        margin-left: 0.313rem;
-        margin-bottom: 0.25rem;
+        border-radius: 1rem;
+        margin: 0 1rem 0 0.1rem;
         /* border: red solid 1px; */
     }
     
@@ -428,15 +433,15 @@ header nav ul li a {
         display: flex;
         position: absolute;
         top: 1.5rem;
-        right: 6.1rem;
+        right: 0.001rem;
         margin-top: 1.55rem;
         margin-right: 2rem;
         z-index: 10;
     }
 
     .hamburger-menu span {
-        height: 0.626rem;
-        width: 3rem;
+        height: 0.3rem;
+        width: 1.5rem;
         background-color: #7878FF;
         margin-bottom: 0.188rem;
         border-radius: 0.313rem;
